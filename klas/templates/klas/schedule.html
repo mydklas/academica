@@ -1,0 +1,272 @@
+{% extends "klas/base.html" %}
+{% load static %}
+{% block content %}
+<div class="container-fluid">
+    <img src="{% static 'images/img_metaverse.png' %}" width="100%">\
+    <div class="text-block" style="background: rgba(115, 115, 115, 0.5)">
+        <h1 class="a">MANAJEMEN WAKTU SESUAI KEBUTUHAN</h1>
+        <h2 class="a">Melatih Kerja Otak, Mengasah Kecerdasan</h2>
+    </div>
+</div>
+<div class="container" style="height:50px"><br></div>
+<div class="container">
+
+    <h1 class="a">JADWAL KURSUS CODING</h1>
+    <br>
+    <div><h2 class="a">Bali, <span id="displayDateTime"></span></h2></div><br>
+    <div class="container p-3 my-3 border">
+        <h1 class="a">Grade SD Kelas 1-3</h1>
+        <table class="table">
+            <thead class="thead-light">
+                <td>Hari</td>
+                <td>
+                    <td>Jam I</td>
+                    <td>Jam II</td>
+                </td>
+                <td>Kapasitas per group</td>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Senin</td>
+                    <td>
+                        <td>2pm-4pm</td>
+                        <td>5pm-6pm</td>
+                    </td>
+                    <td>5 siswa</td>
+                </tr>
+                <tr>
+                    <td>Selasa</td>
+                    <td>
+                        <td>2pm-4pm</td>
+                        <td>5pm-6pm</td>
+
+                    </td>
+                    <td>5 siswa</td>
+                </tr>
+                <tr>
+                    <td>Rabu</td>
+                    <td>
+                        <td>2pm-4pm</td>
+                        <td>5pm-6pm</td>
+
+                    </td>
+                    <td>5 siswa</td>
+                </tr>
+                <tr>
+                    <td>Kamis</td>
+                    <td>
+                        <td>2pm-4pm</td>
+                        <td>5pm-6pm</td>
+                    </td>
+                    <td>5 siswa</td>
+                </tr>
+                <tr>
+                    <td>Jumat</td>
+                    <td>
+                        <td>2pm-4pm</td>
+                        <td>5pm-6pm</td>
+                    </td>
+                    <td>5 siswa</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="container" align="center">
+        <form method="post" action="{% url 'booking' %}" enctype="multipart/form-data">
+            <button type="submit" class="btn btn-warning btn-lg">Book Now</button>
+        </form>
+        </div>
+    </div>
+    <div></div>
+    <div class="container p-3 my-3 border">
+        <br>
+        <h1 class="a">Grade SD Kelas 4-6</h1>
+        <table class="table">
+            <thead class="thead-light">
+                <td>Hari</td>
+                <td>
+                    <td>Jam I</td>
+                    <td>Jam II</td>
+                </td>
+                <td>Kapasitas per group</td>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td>
+                        <td>2pm-4pm</td>
+                        <td>5pm-6pm</td>
+                    </td>
+                    <td>5 students</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>
+                        <td>2pm-4pm</td>
+                        <td>5pm-6pm</td>
+
+                    </td>
+                    <td>5 students</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>
+                        <td>2pm-4pm</td>
+                        <td>5pm-6pm</td>
+
+                    </td>
+                    <td>5 students</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>
+                        <td>2pm-4pm</td>
+                        <td>5pm-6pm</td>
+                    </td>
+                    <td>5 students</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>
+                        <td>2pm-4pm</td>
+                        <td>5pm-6pm</td>
+                    </td>
+                    <td>5 students</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="container" align="center">
+        <form method="post" action="{% url 'booking' %}" enctype="multipart/form-data">
+            <button type="submit" class="btn btn-warning btn-lg">Book Now</button>
+        </form>
+        </div>
+    </div>
+    <div></div>
+    <div class="container p-3 my-3 border">
+        <br>
+        <h1 class="a">Grade SMP Kelas 7-9</h1>
+        <table class="table">
+            <thead class="thead-light">
+                <td>Hari</td>
+                <td>
+                    <td>Jam I</td>
+                    <td>Jam II</td>
+                </td>
+                <td>Kapasitas per group</td>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td>
+
+                        <td>5pm-6pm</td>
+                        <td>8pm-10pm</td>
+                    </td>
+                    <td>5 students</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>
+
+                        <td>5pm-6pm</td>
+                        <td>8pm-10pm</td>
+
+                    </td>
+                    <td>5 students</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>
+
+                        <td>5pm-6pm</td>
+                        <td>8pm-10pm</td>
+
+                    </td>
+                    <td>5 students</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>
+                        <td>5pm-6pm</td>
+                        <td>8pm-10pm</td>
+                    </td>
+                    <td>5 students</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>
+                        <td>5pm-6pm</td>
+                        <td>8pm-10pm</td>
+                    </td>
+                    <td>5 students</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div></div>
+    <div class="container p-3 my-3 border">
+        <br>
+        <h1 class="a">Grade SMA Kelas 10-12</h1>
+        <table class="table">
+            <thead class="thead-light">
+                <td>Hari</td>
+                <td>
+                    <td>Jam I</td>
+                    <td>Jam II</td>
+                </td>
+                <td>Kapasitas per group</td>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td>
+                        <td>5pm-6pm</td>
+                        <td>8pm-10pm</td>
+                    </td>
+                    <td>5 students</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>
+                        <td>5pm-6pm</td>
+                        <td>8pm-10pm</td>
+
+                    </td>
+                    <td>5 students</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>
+                        <td>5pm-6pm</td>
+                        <td>8pm-10pm</td>
+
+                    </td>
+                    <td>5 students</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>
+                        <td>5pm-6pm</td>
+                        <td>8pm-10pm</td>
+                    </td>
+                    <td>5 students</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>
+                        <td>5pm-6pm</td>
+                        <td>8pm-10pm</td>
+                    </td>
+                    <td>5 students</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="container" align="center">
+        <form method="post" action="{% url 'booking' %}" enctype="multipart/form-data">
+            <button type="submit" class="btn btn-warning btn-lg">Book Now</button>
+        </form>
+    </div>
+    </div>
+
+</div>
+
+{% endblock content %}

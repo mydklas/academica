@@ -1,0 +1,98 @@
+{% extends "klas/base.html" %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+
+    <h2>Booking Class Form</h2>
+    <div class="container p-3 my-3 bg-dark text-white">
+    <form action="{% url 'klas-home' %}">
+
+        <table class="table table-borderless">
+            <tbody>
+                <tr>
+                    <td>
+                        <label for="fname" style="text-align:right">First name :</label>
+                        <input type="text" id="fname" name="fname" max=50 size=50 required>
+                    </td>
+                    <td>
+                        <label for="lname" style="text-align:right">Last name :</label>
+                        <input type="text" id="lname" name="lname" max=50 size=50 required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="phone" style="text-align:right">Enter a phone number:</label>
+                    </td>
+                    <td>
+                        <input type="tel" id="phone" name="phone" placeholder="123-445-678111" required><br>
+                        <small>Format: 08x-xxx-xxx-xxxxxx</small><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="klas" style="text-align:right">Choose a class program :</label>
+                    </td>
+                    <td>
+                        <select id="klas" name="klas" placeholder="8-12 Years Beginner">
+                            <option value="8beginner">8-12 Years Beginner</option>
+                            <option value="8inter">8-12 Years Intermediate</option>
+                            <option value="13beginner">13-17 Years Beginner</option>
+                            <option value="13inter">13-17 Years Intermediate</option>
+                            <option value="13advance">13-17 Years Advance</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="tschedule" style="text-align:right">Choose Time Schedules:</label>
+                    </td>
+                    <td>
+                        <select id="tschedule" name="tschedule" placeholder="Monday 2pm-4pm" multiple>
+                            <option value="Mon2pm">Monday 2pm-4pm</option>
+                            <option value="Mon4pm">Monday 2pm-4pm</option>
+                            <option value="Mon8pm">Monday 8pm-10pm</option>
+                            <option value="Tue2pm">Tuesday 2pm-4pm</option>
+                            <option value="Tue4pm">Tuesday 2pm-4pm</option>
+                            <option value="Tue8pm">Tuesday 8pm-10pm</option>
+                            <option value="Wed2pm">Wednesday 2pm-4pm</option>
+                            <option value="Wed4pm">Wednesday 2pm-4pm</option>
+                            <option value="Wed8pm">Wednesday 8pm-10pm</option>
+                            <option value="Thu2pm">Thursday 2pm-4pm</option>
+                            <option value="Thu4pm">Thursday 2pm-4pm</option>
+                            <option value="Thu8pm">Thursday 8pm-10pm</option>
+                            <option value="Fri2pm">Friday 2pm-4pm</option>
+                            <option value="Fri4pm">Friday 2pm-4pm</option>
+                            <option value="Fri8pm">Friday 8pm-10pm</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="date_start" style="text-align:right">Date start choice :</label></td>
+                    <td>
+                        <input type="date" id="date_start" name="date_start" required>
+                    </td>
+                </tr>
+                <tr>
+                     <div class="checkbox">
+                        <label><input type="checkbox" name="remember"> Remember me</label>
+                    </div>
+                </tr>
+            </tbody>
+        </table>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="reset" class="btn btn-danger">Reset</button>
+        </div>
+
+    </form>
+    </div>
+
+
+    {% else %}
+        <div class="container"
+            <h1>Please login or register first before booking a class program.</h1>
+            <h2 href="{% url 'klas-home' %}">Back</h2>
+        </div>
+    {% endif %}
+
+{% endblock content %}

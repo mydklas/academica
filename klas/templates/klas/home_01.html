@@ -1,0 +1,70 @@
+{% extends "klas/base.html" %}
+{% load static %}
+{% block content %}
+
+            <div class="col-sm-6">
+                <div class="container">
+                {% for post in posts %}
+                <article class="media content-section">
+                    <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}">
+                    <div class="media-body">
+
+                        <div class="article-metadata">
+                            <a class="mr-2" href="{% url 'user-posts' post.author.username %}">{{ post.author }}</a>
+                            <small class="text-muted">{{ post.date_posted | date:"F d,Y"}}</small>
+                        </div>
+                        <br>
+                        <h2><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
+                        <br>
+                        <div class="def-img">
+                            <img src="{{ post.image_post.url }}" height="300">
+                            <code style="italic">Source : {{ post.caption }}</code>
+                        </div>
+                        <br>
+                        <br>
+                        <div>
+                            <p class="article-content">{{ post.content }}</p>
+                        </div>
+                    </div>
+                </article>
+                {% endfor %}
+                {% if is_paginated %}
+
+                    {% if page_obj.has_previous %}
+                        <a class="btn btn-outline-info mb-4" href="?page=1">First</a>
+                        <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+                    {% endif %}
+
+                    {% for num in page_obj.paginator.page_range %}
+                        {% if page_obj.number == num %}
+                            <a class="btn btn-info mb-4" href="?page={{ num }}">{{ num }}</a>
+                        {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                            <a class="btn btn-outline-info mb-4" href="?page={{ num }}">{{ num }}</a>
+                        {% endif %}
+                    {% endfor %}
+
+                    {% if page_obj.has_next %}
+                        <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number }}">Next</a>
+                        <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+                    {% endif %}
+
+                {% endif %}
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="container-fluid">
+                    <h1>Mengapa belajar coding perlu sejak dini?</h1><br>
+
+                    <img src="{% static '/images/img-default.jpg' %}" height="300px">
+                    <br>
+
+                    <p>Dunia digital saat ini telah berkembang begitu pesat dibanding 10 tahun yang lalu. 5 atau 10 tahun ke depan tentu akan berubah dengan drastis dimana hampir semua aktivitas memerlukan perangkat bantu yang memudahkan manusia untuk hidup dalam dunia digital. Aktivitas di rumah, di tempat kerja, di tempat hiburan, di tempat ibadah bahkan selama traveling semakin bergantung dengan teknologi digital. Meskipun saat ini infrastruktur teknologi digital masih belum merata namun niscaya tidak lama lagi semua wilayah khususnya di Indonesia akan merasakan dunia yang sama yang dialami oleh warga yang tinggal di perkotaan yang lebih dulu menikmati dan memanfaatkan teknologi ini. </p>
+                    <p>Jika semua warga sudah terhubung secara online maka cepat atau lambat semua aktivitas kehidupan akan memerlukan perangkat bantu berupa aplikasi yang mendukung setiap aktivitas warga. Saat ini begitu banyak aplikasi yang beredar dan dijual namun di masa mendatang tetap membutuhkan inovasi dan penyesuaian untuk menjawab kebutuhan jaman. Untuk itu perlu disiapkan sumber daya manusia yang dapat memenuhi kebutuhan tersebut khususnya inovasi yang menyesuaikan dengan kebutuhan masyarakat Indonesia di masa mendatang. Kesiapan sumber daya manusia itu harus diupayakan dengan mendidik putra-putri kita dengan pengetahuan dasar teknologi digital khususnya perangkat lunaknya. Anak-anak harus dilatih berpikir logis, sistematis dan matematis sebagai dasar untuk mengenal algoritma coding.</p>
+                    <p>Untuk mempercepat anak-anak menguasai coding dasar maka diperlukan bantuan guru sehingga proses pembelajaran itu dapat berlangsung dengan efektif dan efisien dibandingkan belajar sendiri. Dengan bimbingan seorang guru maka anak-anak dapat diarahkan dengan tepat bagaimana belajar coding mulai dari tingkat dasar sampai tingkat mahir. Selama proses pembimbingan, anak-anak akan diberikan pengetahuan teori, algoritma dasar, bahasa coding, pengenalan perangkat lunak, pelatihan coding dan latihan pemecahan proble. Di akhir pembimbingan, anak-anak diharapkan mampu menyelesaikan problem sederhana dengan membuat coding sendiri untuk memecahkan problem sendiri. Pengetahuan dasar coding ini dapat ditingkatkan untuk menjejak pada level yang lebih tinggi secara bertahap hingga sampai pada taraf pemecahan problem riil di dunia nyata pada usia yang lebih dewasa.</p>
+                    <br>
+                    By Myd, 21/Juni/2022<br>
+                </div>
+            </div>
+
+
+{% endblock content %}

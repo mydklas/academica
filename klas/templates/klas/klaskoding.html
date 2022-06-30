@@ -1,0 +1,268 @@
+{% extends "klas/base.html" %}
+{% load static %}
+{% block content %}
+<div class="container-fluid">
+    <img src="{% static 'images/img_digital_world.png' %}" width="100%">
+    <div class="text-block" style="background: rgba(115, 115, 115, 0.5)">
+        <h1 class="a" style="font-size : 40px;color:white">KELAS CODING BAGI SD, SMP DAN SMA</h1>
+        <h2 class="a" style="font-size : 30px;color:white">Melatih Kerja Otak, Mengasah Kecerdasan</h2>
+    </div>
+
+</div>
+<div class="container" style="height:60px"><br></div>
+<div class="container" >
+
+    <div class="jumbotron" >
+        <br><br>
+        <h1 class="font-weight-bold">PROGRAM KURSUS CODING</h1>
+        <br>
+        <div><h2 class="a">Bali, <span id="displayDateTime"></span></h2></div><br>
+        <div class="container-fluid" >
+            <div class="container">
+                <h1>Grade SD Kelas 1-3</h1>
+                <br>
+                <p class="text-break">Pengenalan pada pemrograman merupakan kursus pemrograman yang ditujukan utamanya untuk anak-anak sekolah dasar dari usia 8-12 tahun menggunakan sebuah software pemrograman grafis. Para siswa mulai pemrograman dengan coding berbasis blok. Melalui puzzle-puzzle coding, proyek dan cerita, mereka diharapkan dapat memahami konsep-konsep dasar dalam matematika dan pemrograman seperti waktu, kecepatan dan persyaratan-persyaratan tertentu  yang harus dipenuhi.</p>
+                <p><ul style="list-style-type:square;">
+                    <li>Pengenalan pemrograman untuk anak-anak membuat permainan interaktif.</li>
+                    <li>Anak-anak akan membuat program mereka sendiri, animasi dan permainan.</li>
+                    <li>60 jam pembelajaran yang menyenangkan. Masing-masing level 20 jam.</li>
+                    <li>Beberapa tantangan dan quiz coding</li></ul>
+
+                </p>
+            </div>
+            <div class="container-fluid text-center">
+                <br>
+                <h2 class="font-weight-bold">Apa yang dipelajari?</h2><br>
+                <table class="table table-borderless">
+                    <tbody>
+                    <tr style="text-align:center">
+                        <td>
+                            <img src="{% static 'images/img_logic_1.png' %}"><br><br>
+                            <h2 class="font-weight-bold">Bangun logika</h2><br>
+                            <h3>Belajar bagaimana menggunakan logika untuk membuat program dan memecahkan permasalahan yang rumit</h3>
+                        </td>
+                        <td>
+                            <img src="{% static 'images/img_math_1.png' %}"><br><br>
+                            <h2 class="font-weight-bold">Konsep Matematika</h2><br>
+                            <h3>Belajar tentang konsep kunci matematika dalam pemrograman dan sistem koordinat</h3>
+                        </td>
+                        <td>
+                            <img src="{% static 'images/img_game_1.png' %}"><br><br>
+                            <h2 class="font-weight-bold">Desain Game</h2><br>
+                            <h3>Belajar aspek-aspek berbeda dari desain dan pembuatan game dan animasi</h3>
+                        </td>
+                    </tr>
+                    <tr style="text-align:center">
+                        <td>
+                            <img src="{% static 'images/img_elif_1.png' %}"><br><br>
+                            <h2 class="font-weight-bold">Pernyataan Bersyarat</h2><br>
+                            <h3 >Belajar tentang  penggunaan pernyataan bersyarat untuk membuat keputusan dalam program komputer</h3>
+                        </td>
+                        <td>
+                            <img src="{% static 'images/img_time_1.png' %}"><br><br>
+                            <h2 class="font-weight-bold">Konsep Waktu</h2><br>
+                            <h3>Belajar bagaimana menggunakan waktu untuk mengendalikan beberapa aspek dari kode yang dibuat seperti penundaan dan kecepatan</h3>
+                        </td>
+                        <td>
+                            <img src="{% static 'images/img_loop_1.png' %}"><br><br>
+                            <h2 class="font-weight-bold">Deret dan Pengulangan ( Loops )</h2>
+                            <h3>Belajar bagaimana menggunakan waktu untuk mengendalikan beberapa aspek dari kode yang dibuat seperti penundaan dan kecepatan.</h3>
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+                <br>
+                <div class="container" style="text-align:center">
+                    <form method="post" action="{% url 'booking' %}" enctype="multipart/form-data">
+                        <button type="submit" class="btn btn-warning btn-lg">Book Now</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="jumbotron jumbotron-fluid">
+
+        <div>
+            <h1 >Grade SD Kelas 4-6</h1><br>
+            <p class="text-break"> Dalam pemrograman game dengan software Scratch siswa belajar konsep-konsep kunci ilmu komputer seperti deret, loop, pernyataan bersyarat dan abstraksi dengan membangun proyek mereka sendiri dari cerita yang dianimasikan dan permainan (game). Para siswa dalam kelompok umur ini menghadapi tantangan untuk belajar tata kalimat coding oleh karena itu software Scratch sangat membantu siswa sebagai jembatan dengan persiapan dan pembekalan para siswa dengan logika yang perlu dan konsep-konsep pemrograman sedemikian hingga mereka mendapatkan kemudahan untuk belajar tata kalimat coding pada tahap lebih lanjut.</p>
+        </div>
+        <div class="container-fluid" style="text-align:center">
+            <br>
+            <h2 class="font-weight-bold">Apa yang dipelajari?</h2><br>
+            <table class="table-borderless">
+                <tbody>
+                <tr style="text-align:center">
+                    <td>
+                        <img src="{% static 'images/img_logic_1.png' %}"><br><br>
+                        <h2 class="font-weight-bold">Bangun logika</h2><br>
+                        <h3>Belajar bagaimana menggunakan logika untuk membuat program dan memecahkan problem yang rumit</h3>
+                    </td>
+                    <td>
+                        <img src="{% static 'images/img_math_1.png' %}"><br><br>
+                        <h2 class="font-weight-bold">Operasi Matematika</h2><br>
+                        <h3>Belajar bagaimana menggunakan operasi matematika dalam pemrograman</h3>
+                    </td>
+                    <td>
+                        <img src="{% static 'images/img_game_1.png' %}"><br><br>
+                        <h2 class="font-weight-bold">Desain Game</h2><br>
+                        <h3>Belajar aspek-aspek berbeda dari desain dan pembuatan game dan animasi</h3>
+                    </td>
+                </tr>
+                <tr style="text-align:center">
+
+                    <td>
+                        <img src="{% static 'images/img_elif_1.png' %}"><br><br>
+                        <h2 class="font-weight-bold">Pernyataan Bersyarat</h2><br>
+                        <h3>Belajar tentang  penggunaan pernyataan bersyarat untuk membuat keputusan dalam program komputer</h3>
+
+                    </td>
+                    <td>
+                        <img src="{% static 'images/img_variable_1.png' %}"><br><br>
+                        <h2 class="font-weight-bold">Variabel</h2><br>
+                        <h3>Belajar tentang penyimpanan data dalam variabel dan menggunakan mereka untuk program lebih efisien</h3>
+
+                    </td>
+                    <td>
+                        <img src="{% static 'images/img_loop_1.png' %}"><br><br>
+                        <h2 class="font-weight-bold">Deret dan Pengulangan ( Loops )</h2><br>
+                        <h3>Belajar bagaimana menulis program cerdas dengan loop dan deret</h3>
+                    </td>
+                </tr>
+                </tbody>
+
+            </table>
+            <br>
+            <div class="container" "container" style="text-align:center">
+                <form method="post" action="{% url 'booking' %}" enctype="multipart/form-data">
+                    <button type="submit" class="btn btn-warning btn-lg">Book Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="jumbotron jumbotron-fluid">
+        <div>
+            <h1 >Grade SMP Kelas 7-9</h1>
+            <br>
+            <p class="text-break">Dirancang bagi siswa yang memiliki pikiran kreatif, para siswa dalam kursus ini belajar untuk membuat kode menggunakan tata bahasa pemrograman ( syntax ) dan sebuat alat bantu software yang membantu semudah mungkin pengenalan pada bahasa pemrograman/coding berbasiskan tata kalimat/sintaks. Melalui pembuatan sketsa coding secara visual, para siswa menghasilkan seni grafis yang menakjubkan dan menggali kesempatan-kesempatan baru untuk memanfaatkan kekuatan  komputasi komputer lintas disiplin ilmu. Para siswa akan dikenalkan pada konsep-konsep kunci ilmu komputer seperti fungsi dan pengulangan, yang dikenal sebagai  teori desain dasar.</p>
+        </div>
+<!--           tabel-->
+        <div class="container" style="text-align:center">
+            <br>
+            <h2 class="font-weight-bold">Apa yang dipelajari?</h2><br>
+            <table>
+                <tbody>
+                    <tr style="text-align:center">
+                        <td>
+                            <img src="{% static 'images/img_syntax_1.png' %}"><br><br>
+                            <h2 class="font-weight-bold">Sintaks Dasar</h2><br>
+                            <h4>Belajar sintaks pemrograman dasar untuk menulis program cerdas, membuat game dan kerja seni digital</h4>
+                        </td>
+                        <td>
+                            <img src="{% static 'images/img_digital_2.png' %}"><br><br>
+                            <h2 class="font-weight-bold">Seni Digital</h2><br>
+                            <h4>Belajar bagaimana untuk menggunakan teknologi digital untuk membuat kerja seni yang menarik</h4>
+                        </td>
+                        <td>
+                            <img src="{% static 'images/img_datatype_1.png' %}"><br><br>
+                            <h2 class="font-weight-bold">Tipe Data</h2><br>
+                            <h4>Belajar tipe-tipe data yang berbeda seperti bilangan bulat (integer), bilangan real ( floats), boolean, dan lain-lain</h4>
+                        </td>
+                    </tr>
+                    <tr style="text-align:center">
+                        <td>
+                            <img src="{% static 'images/img_operations_1.png' %}"><br><br>
+                            <h2 class="font-weight-bold">Operasi-operasi</h2><br>
+                            <h4>Belajar bagaimana menggunakan operasi aritmatika, operasi logika dan operasi relasi dalam pemrograman</h4>
+                        </td>
+                        <td>
+                            <img src="{% static 'images/img_game_1.png' %}"><br><br>
+                            <h2 class="font-weight-bold">Desain Game</h2><br>
+                            <h4>Belajar aspek-aspek berbeda dari desain game dan membuat game dan animasi</h4>
+                        </td>
+                        <td>
+                            <img src="{% static 'images/img_loop_1.png' %}"><br><br>
+                            <h2 class="font-weight-bold">Peryataan Bersyarat dan Loops</h2><br>
+                            <h4>Belajar bagaimana menggunakan loop dan pernyataan bersyarat untuk menulis program cerdas</h4>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+        <br>
+<!--         endtabel-->
+        <div class="container" style="text-align:center">
+            <form method="post" action="{% url 'booking' %}" enctype="multipart/form-data">
+                <button type="submit" class="btn btn-warning btn-lg">Book Now</button>
+            </form>
+        </div>
+    </div>
+    <div class="jumbotron jumbotron-fluid">
+        <div>
+            <h1 >Grade SMA Kelas 10-12</h1>
+            <br>
+            <p class="text-break">Dirancang untuk siapapun siswa yang memiliki keingintahuan yang tinggi akan kekuatan komputer dan teknologinya, kursus ini mengenalkan ilmu komputer dasar melalui pemrogaman sebuah rangkaian proyek yang menyenangkan dan tantangan pembuatan kode yang bermanfaat.  Setelah pengenalan sintaks pemrograman dan konsep ilmu komputer ,  para siswa juga belajar berpikir tentang problem secara logic dan memecahkannya secara sistematis. Kursus ini juga mengenalkan pustaka coding pada para siswa, meletakkan dasar yang solid bagi lebih banyak aplikasi-aplikasi  program yang sangat bermanfaat  pada tingkat yang lebih tinggi</p>
+
+        </div>
+<!--        tabel-->
+        <div class="container" style="text-align:center">
+            <br>
+            <h2 class="font-weight-bold">Apa yang dipelajari ?</h2><br>
+            <table>
+                <tbody>
+                    <tr style="text-align:center">
+                        <td>
+                            <img src="{% static 'images/img_adsyntax_1.png' %}"><br><br>
+                            <h2 class="font-weight-bold">Sintaks Tingkat Lanjut ( Advanced Syntax )</h2><br>
+                            <h4>Belajar sintaks pemrograman tingkat lanjut untuk menulis kode-kode paling efisien.</h4>
+                        </td>
+                        <td>
+                            <img src="{% static 'images/img_module_1.png' %}"><br><br>
+                            <h2 class="font-weight-bold">Modul-modul</h2><br>
+                            <h4>Menggunakan modul-modul yang berkaitan bersama dengan kode dan membuat kode lebih mudah dipahami dan digunakan. Belajar bagaimana menggunakan modul-modul secara cerdas dalam kode</h4>
+                        </td>
+                        <td>
+                            <img src="{% static 'images/img_datatype_1.png' %}"><br><br>
+                            <h2 class="font-weight-bold">Tipe Data</h2><br>
+                            <h4>Belajar tipe-tipe data yang berbeda seperti bilangan bulat (integer), bilangan real ( floats), boolean, dan lain-lain</h4>
+                        </td>
+                    </tr>
+                    <tr style="text-align:center">
+                        <td>
+                            <img src="{% static 'images/img_operations_1.png' %}"><br><br>
+                            <h2 class="font-weight-bold">Operasi-operasi</h2><br>
+                            <h4>Belajar bagaimana menggunakan operasi aritmatika, operasi logika dan operasi relasi dalam pemrograman</h4>
+                        </td>
+                        <td>
+                            <img src="{% static 'images/img_elif_1.png' %}"><br><br>
+                            <h2 class="font-weight-bold">Peryataan Bersyarat dan Loops</h2><br>
+                            <h4>Belajar bagaimana menggunakan loop dan pernyataan bersyarat untuk menulis program cerdas</h4>
+                        </td>
+                        <td>
+                            <img src="{% static 'images/img_buildsoft_1.png' %}"><br><br>
+                            <h2 class="font-weight-bold">Membangun Software</h2><br>
+                            <h4>Belajar bagaimana membuat software sederhana yang digunakan dalam kehidupan nyata seperti chatbots.</h4>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+<!--        endtabel-->
+        <br>
+        <div class="container" style="text-align:center">
+            <form method="post" action="{% url 'booking' %}" enctype="multipart/form-data">
+                <button type="submit" class="btn btn-warning btn-lg">Book Now</button>
+            </form>
+        </div>
+    </div>
+
+</div>
+{% endblock content %}

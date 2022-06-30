@@ -1,0 +1,39 @@
+{% extends "klas/base.html" %}
+{% block content %}
+
+
+
+<article class="media content-section">
+<!--    <img class="rounded-circle article-img" src="{{ object.author.profile.image.url }}">-->
+    <div class="media-body">
+        <h1>Booking Detail</h1>
+        <br>
+        <table class="table table-borderless">
+            <tbody>
+                <tr>
+                    <td style="text-align:right">Full name :</td>
+                    <td>{{ form.fname }} {{ form.lname }}</td>
+                </tr>
+                <tr>
+                    <td style="text-align:right">Class program :</td>
+                    <td>{{ form.klas }}</td>
+                </tr>
+                <tr>
+                    <td style="text-align:right">Time Schedule :</td>
+                    <td>{{ form.time_schedule }}</td>
+                </tr>
+                <tr>
+                    <td style="text-align:right">Date started  :</td>
+                    <td>{{ form.date_started }}</td>
+                </tr>
+
+            </tbody>
+        </table>
+        <br>
+        <a href="{% url 'klas-home' %}" class="btn btn-info" role="button">Back</a>
+
+
+    </div>
+</article>
+
+{% endblock content %}

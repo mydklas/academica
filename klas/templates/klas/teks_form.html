@@ -1,0 +1,25 @@
+{% extends "klas/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    {% if user.is_authenticated %}
+
+    <div class="container">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Home content input</legend>
+                {{ form|crispy }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Save</button>
+            </div>
+        </form>
+
+        {% else %}
+        <div class="container"
+            <h1>Please login or register first before booking a class program.</h1>
+            <h2 href="{% url 'klas-home' %}">Back</h2>
+        </div>
+    {% endif %}
+    </div>
+{% endblock content %}
